@@ -1,0 +1,9 @@
+"ul40")
+        sed -i \
+            -e 's block/bootdevice/by-name/system mmcblk0p21 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p29 ' \
+            -e 's block/bootdevice/by-name/cache mmcblk0p23 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p22 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p1 ' \
+            -e 's block/bootdevice/by-name/fsg mmcblk0p18 ' \
+            "$@"

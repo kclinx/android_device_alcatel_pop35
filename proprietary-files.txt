@@ -81,16 +81,20 @@ vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_wavelet_lib.so
 vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
 vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
+
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
@@ -172,8 +176,6 @@ vendor/lib/libsmemlog.so
 vendor/lib/libsubsystem_control.so
 
 # RIL
-#-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -181,9 +183,8 @@ bin/rild
 bin/rmt_storage
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
--framework/qcnvitems.jar
--framework/qcrilhook.jar
 lib/libril.so
+lib/librilutils.so
 lib/librmnetctl.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
@@ -194,6 +195,13 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libril-qc-ltedirectdisc.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
+vendor/lib/liblqe.so
+
+
 
 # Sensors
 lib/hw/sensors.msm8909.so
@@ -205,7 +213,6 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so

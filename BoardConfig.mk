@@ -37,6 +37,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=softfp
 # Inline kernel building
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+#BOARD_KERNEL_CMDLINE := console=tty0 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
 
 # FIXME: SELINUX does not work yet
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -49,7 +50,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-TARGET_KERNEL_CONFIG := lineage_ul40_defconfig
+TARGET_KERNEL_CONFIG := halium_ul40_defconfig
 TARGET_KERNEL_SOURCE := kernel/ans/ul40
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
 
