@@ -24,9 +24,9 @@ mka systemimage
 ```
 This compiles the resulting: `out/target/product/ul40/{boot.img,system.img}`
 
-# Does not boot out-of-the-box yet.
+# Does not boot out-of-the-box yet.  This is a hacky wip, don't expect anything to be functional.
 Boots to lineageos 14 with precompiled kernel extracted from stock rom.
-Instructions:
+Instructions to use stock kernel:
 ```
 # extract both lineage14 bootimg and stock bootimg
 mkdir lineage-boot
@@ -45,7 +45,11 @@ abootimg --create precomp.img -f bootimg.cfg -k ../stock-boot/zImage -r initrd.i
 edl --loader=/path/to/ul40.mbn w boot precomp.img
 ```
 
-## What works:
+With the compiled kernel, the screen doesn't work, but you can get debug output through UART.
+
+Maybe with different kernel sources it would be possible to get it to work better.
+
+## What works (with prebuilt kernel):
  * Wifi (after wlan.ko from stock rom is loaded)
  * Display
  * Touchscreen
