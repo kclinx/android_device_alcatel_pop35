@@ -30,7 +30,7 @@ import init.target.rc
 import init.qcom.factory.rc
 
 on early-init
-    mount debugfs debugfs /sys/kernel/debug
+    mount tmpfs tmpfs /sys/kernel/debug
 
 on init
     # Set permissions for persist partition

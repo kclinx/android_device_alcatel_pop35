@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -8,7 +8,7 @@
 #     * Redistributions in binary form must reproduce the above copyright
 #       notice, this list of conditions and the following disclaimer in the
 #       documentation and/or other materials provided with the distribution.
-#     * Neither the name of The Linux Foundation nor
+#     * Neither the name of Linux Foundation nor
 #       the names of its contributors may be used to endorse or promote
 #       products derived from this software without specific prior written
 #       permission.
@@ -26,24 +26,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-target=`getprop ro.board.platform`
+baseband=`getprop ro.baseband`
+if [ "$baseband" = "mdm" ] || [ "$baseband" = "mdm2" ]; then
+	start mdm_helper
+fi
 
-start_vm_bms()
-{
-	if [ -e /dev/vm_bms ]; then
-		chown -h root.system /sys/class/power_supply/bms/current_now
-		chown -h root.system /sys/class/power_supply/bms/voltage_ocv
-		chmod 0664 /sys/class/power_supply/bms/current_now
-		chmod 0664 /sys/class/power_supply/bms/voltage_ocv
-		start vm_bms
-	fi
-}
-
-case "$target" in
-    "msm8916")
-        start_vm_bms
-        ;;
-    "msm8909")
-        start_vm_bms
-        ;;
-esac

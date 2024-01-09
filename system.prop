@@ -4,6 +4,7 @@
 #
 # system.prop for msm8909
 #
+ro.adb.secure=0
 
 #rild.libpath=/system/lib/libreference-ril.so
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
@@ -151,7 +152,8 @@ voice.voip.conc.disabled=true
 rec.playback.conc.disabled=true
 
 #Set composition for USB
-persist.sys.usb.config=diag,serial_smd,rmnet_qti_bam
+persist.sys.usb.config=mtp,adb
+#persist.sys.usb.config=diag,serial_smd,rmnet_qti_bam
 #Set read only default composition for USB
 ro.sys.usb.default.config=diag,serial_smd,rmnet_qti_bam,adb
 

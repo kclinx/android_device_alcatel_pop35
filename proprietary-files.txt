@@ -80,17 +80,23 @@ vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_wavelet_lib.so
+
 vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
 vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
+
+
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
@@ -184,6 +190,7 @@ etc/permissions/qcrilhook.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 lib/libril.so
+lib/librilutils.so
 lib/librmnetctl.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
@@ -194,6 +201,11 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libril-qc-ltedirectdisc.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
+vendor/lib/liblqe.so
 
 # Sensors
 lib/hw/sensors.msm8909.so
@@ -218,6 +230,27 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
+
+# firmware
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+
+# daemons
+bin/loc_launcher
+vendor/bin/RIDLClient.exe
+vendor/bin/fidodaemon
+bin/cnss-daemon
+vendor/etc/RIDL/GoldenLogmask.dmc
+vendor/etc/RIDL/OriginalGoldenLog.dmc
+vendor/etc/RIDL/RIDL.db
+vendor/etc/RIDL/qdss.cfg
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
