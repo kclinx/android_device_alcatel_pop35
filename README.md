@@ -47,7 +47,25 @@ edl --loader=/path/to/ul40.mbn w boot precomp.img
 
 With the compiled kernel, the screen doesn't work, but you can get debug output through UART.
 
-Maybe with different kernel sources it would be possible to get it to work better.
+Maybe with different kernel sources it would be possible to get it to work better.  You may need to dump the dtbs from the stock kernel to get it to do anything at all.
+
+Use PabloCastellano's [extract-dtb](https://github.com/PabloCastellano/extract-dtb) tool to get the appended dtb image from the stock rom, and decompiled the dtbs using `dtc`.  This yielded 49 dts files, which I added to my forked kernel tree.
+```
+# unpack stock bootimage
+$ abootimg -x boot.bin
+
+# dump appended dtbs
+$ extract-dtb -o stock_dtbs zImage
+
+# decompile each dtb to a dts
+$ mkdir dump_dts
+$ for i in `ls stock_dtbs/*.dtb` ; do dtc -I dtb -O dts -o dump_dts/$(basename -s .dtb $i).dts $i ; done
+```
+Then add the .dts files to arch/arm/boot/dts/qcom, and edited the Makefile to build them for `CONFIG_ARCH_MSM8909`.
+
+ans/teleepoch enabled `/proc/config.gz` in the stock kernel, so you can also dump that using adb and get a defconfig for the device.
+
+By probing the motherboard with a multimeter, I identified the pinout of the UART port too.  It is a 1.8V UART and runs at `115200` baud. ![uart](images/uart.jpg)
 
 ## What works (with prebuilt kernel):
  * Wifi (after wlan.ko from stock rom is loaded)
@@ -57,3 +75,6 @@ Maybe with different kernel sources it would be possible to get it to work bette
 
 ## What doesn't work
  * everything else
+
+## Lineage running with stock kernel:
+![lineage wip](images/lineage.jpg)
