@@ -201,6 +201,8 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
+
+# ??
 vendor/lib/libril-qc-radioconfig.so
 vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/librilqmiservices.so
@@ -244,13 +246,13 @@ etc/firmware/leia_pm4_470.fw
 
 # daemons
 bin/loc_launcher
-vendor/bin/RIDLClient.exe
-vendor/bin/fidodaemon
+#vendor/bin/RIDLClient.exe
+#vendor/bin/fidodaemon
 bin/cnss-daemon
-vendor/etc/RIDL/GoldenLogmask.dmc
-vendor/etc/RIDL/OriginalGoldenLog.dmc
-vendor/etc/RIDL/RIDL.db
-vendor/etc/RIDL/qdss.cfg
+#vendor/etc/RIDL/GoldenLogmask.dmc
+#vendor/etc/RIDL/OriginalGoldenLog.dmc
+#vendor/etc/RIDL/RIDL.db
+#vendor/etc/RIDL/qdss.cfg
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
