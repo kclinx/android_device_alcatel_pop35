@@ -1,6 +1,19 @@
 # android_device_ans_ul40
 Android device configuration for ANS UL40 msm8909 
 
+```
+#include <std_disclaimer.h>
+/*
+* Your warranty is now void.
+*
+* I am not responsible for bricked devices, dead SD cards,
+* thermonuclear war, or you getting fired because the alarm app failed. Please
+* do some research if you have any concerns about features included in this ROM
+* before flashing it! YOU are choosing to make these modifications, and if
+* you point the finger at me for messing up your device, I will laugh at you.
+*/
+```
+
 # Flashing info:
 Get bkerler's edl program to flash the phone [here](https://github.com/bkerler/edl).
 
