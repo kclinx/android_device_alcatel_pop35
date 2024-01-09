@@ -65,7 +65,7 @@ Then add the .dts files to arch/arm/boot/dts/qcom, and edited the Makefile to bu
 
 ans/teleepoch enabled `/proc/config.gz` in the stock kernel, so you can also dump that using adb and get a defconfig for the device.
 
-By probing the motherboard with a multimeter, I identified the pinout of the UART port too.  It is a 1.8V UART and runs at `115200` baud. ![uart](images/uart.jpg)
+By probing the motherboard with a multimeter, I identified the pinout of the UART port too.  It is a 1.8V UART and runs at `115200` baud. Access to the uart port is disabled in the stock kernel, as the port is shared with the bluetooth chip, however you can use it for debugging a custom kernel or seeing bootloader logs. ![uart](images/uart.jpg)
 
 ## What works (with prebuilt kernel):
  * Wifi (after wlan.ko from stock rom is loaded)
