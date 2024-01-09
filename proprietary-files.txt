@@ -217,7 +217,7 @@ bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 
-# Venus firmware
+# firmware
 etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
@@ -225,6 +225,25 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+
+# daemons
+bin/loc_launcher
+vendor/bin/RIDLClient.exe
+vendor/bin/fidodaemon
+bin/cnss-daemon
+vendor/etc/RIDL/GoldenLogmask.dmc
+vendor/etc/RIDL/OriginalGoldenLog.dmc
+vendor/etc/RIDL/RIDL.db
+vendor/etc/RIDL/qdss.cfg
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so

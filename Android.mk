@@ -87,12 +87,8 @@ ALL_DEFAULT_INSTALLED_MODULES += $(WV_SYMLINKS)
 
 # Symlinks
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
-    ln -sf /tctpersist/data/param/macaddr \
-    $(TARGET_OUT_ETC)/firmware/wlan/prima/macaddr; \
     ln -sf /persist/WCNSS_wlan_dictionary.dat \
     $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini; \
-    ln -sf /persist/ft_fw.bin \
-    $(TARGET_OUT_ETC)/firmware/ft_fw.bin)
+    $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 endif
